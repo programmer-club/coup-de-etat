@@ -22,7 +22,7 @@ public abstract class BaseBot {
         this.coins += coins;
     }
 
-    public abstract ActionPlay playCard(Card[] hand);
+    public abstract ActionPlay playCard(Card[] hand, int opponentCoins);
     public abstract ActionContest shouldContest(Card opponentClaims, Card[] yourHand);
     public abstract ActionAssassinated whenAssassinated(Card opponentsAssassin, Card[] yourHand);
     public abstract ActionRobbed whenRobbed(Card opponentsAssassin, Card[] yourHand);

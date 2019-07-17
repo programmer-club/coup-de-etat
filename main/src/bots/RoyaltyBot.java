@@ -12,7 +12,7 @@ public class RoyaltyBot extends BaseBot {
     }
 
     @Override
-    public ActionPlay playCard(Card[] hand) {
+    public ActionPlay playCard(Card[] hand, int i) {
         if (this.getCoins() >= 7) return ActionPlay.Coup;
         return ActionPlay.PlayDuke;
     }
