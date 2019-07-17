@@ -40,12 +40,12 @@ public class Game {
         ArrayList<Card> deck = createDeck();
         Collections.shuffle(deck);
 
-        hand1 = new Card[] {
+        hand1 = new Card[]{
                 deck.get(0),
                 deck.get(1)
         };
 
-        hand2 = new Card[] {
+        hand2 = new Card[]{
                 deck.get(2),
                 deck.get(3)
         };
@@ -67,6 +67,27 @@ public class Game {
             ActionContest p2contests = ActionContest.Allow;
 
             if (Card.fromPlay(p1) != null) p2contests = player2.shouldContest(Card.fromPlay(p1), hand2);
+
+            if (p2contests == ActionContest.Contest) {
+
+            }
+
+            if (p1 == ActionPlay.Income) {
+                player1.addCoins(1);
+            } else if (p1 == ActionPlay.Coup) {
+                // do coup
+            } else {
+                switch (Card.fromPlay(p1)) {
+                    case Duke:
+                        player1.addCoins(3);
+                        break;
+                    case Captain:
+                    case Assassin:
+                    case Ambassador:
+                    default:
+                        break;
+                }
+            }
 
             // todo: check contest, and then execute action
         }
