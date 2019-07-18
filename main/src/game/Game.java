@@ -21,6 +21,71 @@ public class Game {
         return ca;
     }
 
+    public void doAction(BaseBot actionPerformer, BaseBot actionContestor) {
+        var player1 = actionPerformer;
+        var player2 = actionContestor;
+
+        var hand1 = player1.hand;
+        var hand2 = player2.hand;
+
+        ActionPlay p1 = player1.playCard(player2.getCoins());
+        System.out.println("Player 1 attempts " + p1);
+        ActionContest p2contests = ActionContest.Allow;
+
+        if (Card.fromPlay(p1) != null) p2contests = player2.shouldContest(Card.fromPlay(p1));
+
+        if (p2contests == ActionContest.Contest) {
+            if (hand1[0] == Card.fromPlay(p1) || hand1[1] == Card.fromPlay(p1)) {
+                player2.removeCard(player2.flipCard());
+                // TODO: get new card for player 1
+            } else {
+                player1.removeCard(player1.flipCard());
+            }
+        }
+
+        if (p1 == ActionPlay.Income) {
+            player1.addCoins(1);
+        } else if (p1 == ActionPlay.Coup) {
+            player2.removeCard(player2.flipCard());
+        } else {
+            switch (Card.fromPlay(p1)) {
+                case Duke:
+                    player1.addCoins(3);
+                    break;
+                case Captain:
+                    doCaptain(player1, player2);
+                case Assassin:
+                    doAssassin(player1, player2);
+                case Ambassador:
+                    doAmbassador(player1);
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void doAmbassador(BaseBot player1) {
+        var onDeck = new Card[] {
+                deck.get(0),
+                deck.get(1)
+        };
+        player1.hand = player1.chooseCards(onDeck);
+
+        deck.remove(0);
+        deck.remove(1);
+        // TODO: reshuffle the 2 cards not chosen
+    }
+
+    private void doAssassin(BaseBot player1, BaseBot player2) {
+
+    }
+
+    private void doCaptain(BaseBot player1, BaseBot player2) {
+
+    }
+
+    private ArrayList<Card> deck;
+
     public void start(Class<? extends BaseBot> bot1, Class<? extends BaseBot> bot2) {
         int winner = 0;
 
@@ -36,16 +101,15 @@ public class Game {
         }
 
         int round = 1;
-        Card[] hand1, hand2;
-        ArrayList<Card> deck = createDeck();
+        deck = createDeck();
         Collections.shuffle(deck);
 
-        hand1 = new Card[]{
+        player1.hand = new Card[]{
                 deck.get(0),
                 deck.get(1)
         };
 
-        hand2 = new Card[]{
+        player1.hand = new Card[]{
                 deck.get(2),
                 deck.get(3)
         };
@@ -57,39 +121,19 @@ public class Game {
 
         Collections.shuffle(deck);
 
-        System.out.println("Player 1 has: " + Arrays.toString(hand1));
-        System.out.println("Player 2 has: " + Arrays.toString(hand2));
+        System.out.println("Player 1 has: " + Arrays.toString(player1.hand));
+        System.out.println("Player 2 has: " + Arrays.toString(player2.hand));
 
 
         while (winner == 0) {
-            ActionPlay p1 = player1.playCard(hand1, player2.getCoins());
-            System.out.println("Player 1 attempts " + p1);
-            ActionContest p2contests = ActionContest.Allow;
+            doAction(player1, player2);
+            doAction(player2, player1);
 
-            if (Card.fromPlay(p1) != null) p2contests = player2.shouldContest(Card.fromPlay(p1), hand2);
-
-            if (p2contests == ActionContest.Contest) {
-
+            if (player1.hand.length == 0) {
+                winner = 2;
+            } else if(player2.hand.length == 0) {
+                winner = 1;
             }
-
-            if (p1 == ActionPlay.Income) {
-                player1.addCoins(1);
-            } else if (p1 == ActionPlay.Coup) {
-                // do coup
-            } else {
-                switch (Card.fromPlay(p1)) {
-                    case Duke:
-                        player1.addCoins(3);
-                        break;
-                    case Captain:
-                    case Assassin:
-                    case Ambassador:
-                    default:
-                        break;
-                }
-            }
-
-            // todo: check contest, and then execute action
         }
     }
 }

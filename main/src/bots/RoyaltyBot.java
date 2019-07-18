@@ -12,28 +12,33 @@ public class RoyaltyBot extends BaseBot {
     }
 
     @Override
-    public ActionPlay playCard(Card[] hand, int i) {
+    public ActionPlay playCard(int i) {
         if (this.getCoins() >= 7) return ActionPlay.Coup;
         return ActionPlay.PlayDuke;
     }
 
     @Override
-    public ActionContest shouldContest(Card opponentClaims, Card[] yourHand) {
+    public ActionContest shouldContest(Card opponentClaims) {
         return ActionContest.Allow;
     }
 
     @Override
-    public ActionAssassinated whenAssassinated(Card opponentsAssassin, Card[] yourHand) {
+    public ActionAssassinated whenAssassinated(Card opponentsAssassin) {
         return ActionAssassinated.Allow;
     }
 
     @Override
-    public ActionRobbed whenRobbed(Card opponentsAssassin, Card[] yourHand) {
+    public ActionRobbed whenRobbed(Card opponentsAssassin) {
         return ActionRobbed.Allow;
     }
 
     @Override
-    public Card flipCard(Card[] yourHand) {
-        return yourHand[0];
+    public int flipCard() {
+        return 0;
+    }
+
+    @Override
+    public Card[] chooseCards(Card[] seenCardsOnDeck) {
+        return this.hand;
     }
 }
