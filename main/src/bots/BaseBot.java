@@ -19,8 +19,9 @@ public abstract class BaseBot {
         if (hand.length == 1) {
             hand = new Card[0];
         } else {
-            hand = new Card[1];
-            hand[0] = hand[1 - index];
+            var new_hand = new Card[1];
+            new_hand[0] = hand[1 - index];
+            hand = new_hand;
         }
     }
 

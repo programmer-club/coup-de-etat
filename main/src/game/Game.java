@@ -47,6 +47,8 @@ public class Game {
             player1.addCoins(1);
         } else if (p1 == ActionPlay.Coup) {
             player2.removeCard(player2.flipCard());
+            // TODO: check coin ct
+            player1.addCoins(-7);
         } else {
             switch (Card.fromPlay(p1)) {
                 case Duke:
@@ -109,7 +111,7 @@ public class Game {
                 deck.get(1)
         };
 
-        player1.hand = new Card[]{
+        player2.hand = new Card[]{
                 deck.get(2),
                 deck.get(3)
         };
@@ -134,6 +136,14 @@ public class Game {
             } else if(player2.hand.length == 0) {
                 winner = 1;
             }
+
+            System.out.printf("Round %d over. Player 1 has %s and %d coins, and player 2 has %s and %d coin.\n",
+                    round,
+                    Arrays.toString(player1.hand),
+                    player1.getCoins(),
+                    Arrays.toString(player2.hand),
+                    player2.getCoins());
+            round++;
         }
     }
 }

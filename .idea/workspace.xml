@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/src/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+            <state relative-caret-position="540">
+              <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,15 +60,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/bots/RoyaltyBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="390">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#230#231#0" expanded="true" />
                 <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/bots/BaseBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+            <state relative-caret-position="450">
+              <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
@@ -115,9 +119,9 @@
         <option value="$PROJECT_DIR$/main/src/action/ActionRobbed.java" />
         <option value="$PROJECT_DIR$/main/src/action/ActionAssassinated.java" />
         <option value="$PROJECT_DIR$/main/src/game/Start.java" />
+        <option value="$PROJECT_DIR$/main/src/card/Card.java" />
         <option value="$PROJECT_DIR$/main/src/bots/BaseBot.java" />
         <option value="$PROJECT_DIR$/main/src/bots/RoyaltyBot.java" />
-        <option value="$PROJECT_DIR$/main/src/card/Card.java" />
         <option value="$PROJECT_DIR$/main/src/game/Game.java" />
       </list>
     </option>
@@ -255,7 +259,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563381159132</updated>
-      <workItem from="1563381162888" duration="4771000" />
+      <workItem from="1563381162888" duration="7282000" />
     </task>
     <task id="LOCAL-00001" summary="added iml and .idea">
       <created>1563381316751</created>
@@ -278,11 +282,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563399755721</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="some stuff">
+      <created>1563402235924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563402235924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="stoff">
+      <created>1563470025585</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563470025585</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4771000" />
+    <option name="totallyTimeSpent" value="7282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
@@ -329,7 +347,9 @@
     <MESSAGE value="added iml and .idea" />
     <MESSAGE value="added basic stuff" />
     <MESSAGE value="stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
+    <MESSAGE value="some stuff" />
+    <MESSAGE value="stoff" />
+    <option name="LAST_COMMIT_MESSAGE" value="stoff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -384,37 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/bots/RoyaltyBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/bots/BaseBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/action/ActionAssassinated.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -436,10 +425,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/bots/RoyaltyBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/bots/BaseBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="540">
+          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
